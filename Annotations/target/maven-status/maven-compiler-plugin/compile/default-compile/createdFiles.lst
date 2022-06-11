@@ -1,0 +1,5 @@
+com/housingsimulator/annotations/API.class
+com/housingsimulator/annotations/Main.class
+com/housingsimulator/annotations/EndpointProcessor.class
+com/housingsimulator/annotations/Endpoint.class
+com/housingsimulator/annotations/IllegalAnnotationException.class

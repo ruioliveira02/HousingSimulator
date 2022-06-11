@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" procOnly="true">
+        <outputRelativeToContentRoot value="true" />
+        <processor name="com.simspt.annotations.EndpointProcessor" />
+        <processorPath useClasspath="false" useProcessorModulePath="true">
+          <entry name="$PROJECT_DIR$/out/artifacts/Annotations_jar/Annotations.jar" />
+        </processorPath>
+      </profile>
+      <profile name="Maven default annotation processors profile" enabled="true" procOnly="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="HousingSimulator" />
+      </profile>
+      <profile name="Endpoint" procOnly="true">
+        <outputRelativeToContentRoot value="true" />
+        <processor name="com.simspt.annotations.EndpointProcessor" />
+        <processorPath useProcessorModulePath="true">
+          <entry name="$PROJECT_DIR$/out/artifacts/Annotations_jar/Annotations.jar" />
+        </processorPath>
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="HousingSimulator" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-proc:none" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HousingSimulator" options="" />
+    </option>
+  </component>
+</project>

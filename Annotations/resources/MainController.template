@@ -1,0 +1,101 @@
+/*
+
+=======================================================
+==     THIS IS AN AUTOMATICALLY GENERATED FILE       ==
+=======================================================
+
+                    DO NOT EDIT!
+
+*/
+
+package com.housingsimulator.controller;
+
+import com.housingsimulator.model.Model;
+import com.housingsimulator.view.View;
+
+import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+/**
+ * The main controller of the application.
+ * Is called by the main function and runs the application loop
+ */
+public class MainController extends Controller {
+    private Map<String, Controller> controllers; /*! The map of controllers indexed by their class name */
+
+    /**
+     * Constructor which sets the model of the application and loads all the controllers
+     * @param model the model of the application
+     */
+    public MainController(Model model) {
+        this.setModel(model);
+        this.controllers = new HashMap<>();
+        this.loadControllers();
+    }
+
+    /**
+     * The main application loop
+     */
+    public void run() {
+        Scanner sc = new Scanner(System.in);
+
+        boolean running = true;
+
+        System.out.println("THE HOUSING SIMULATOR");
+        System.out.println("TP POO 2022 - Group 10");
+        System.out.println("For more help, type 'SEND HELP'");
+        System.out.println("============================================");
+
+
+        while(running) {
+            System.out.print("thehousingsimulator> ");
+            String input = sc.nextLine();
+
+            if(input.equals("QUIT")) {
+                running = false;
+            } else {
+                if(!parseInput(input))
+                    System.out.println("Command not recognized");
+            }
+        }
+    }
+
+    /**
+     * Loads all the controllers to be used by the application
+     */
+    private void loadControllers() {
+${controllers}
+    }
+
+    /**
+     * Processes a set of commands by the user.
+     *
+     * @param lines the input lines. Each line is a command to execute
+     * @return Whether or not the commands were found and executed
+     */
+    public boolean parseInput(String[] lines) {
+        boolean result = true;
+
+        for(String line : lines) {
+            result &= parseInput(line);
+        }
+
+        return result;
+    }
+
+    /**
+     * Processes a command by the user.
+     *
+     * @param input the command string
+     * @return Whether or not the command was found and executed
+     */
+    public boolean parseInput(String input) {
+        if(input.equals(""))
+            return true;
+${input}
+        return false;
+    }
+}

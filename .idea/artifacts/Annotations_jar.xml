@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Annotations:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Annotations_jar</output-path>
+    <root id="archive" name="Annotations.jar">
+      <element id="module-output" name="Annotations" />
+    </root>
+  </artifact>
+</component>
